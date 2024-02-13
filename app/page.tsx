@@ -1,95 +1,56 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import { InsuranceList } from '@/components/insuranceList';
+import { Stack, Typography } from '@mui/material';
+
+const insurances = [
+  {
+    insuranceName: '長生きナンバーワン',
+    constructor: '田中 太郎',
+    insuranceFee: 10000,
+    expirationDate: '2023-12-31',
+    insuranceNumber: '1234567890',
+  },
+  {
+    insuranceName: '安心プラン',
+    constructor: '山田 花子',
+    insuranceFee: 8000,
+    expirationDate: '2024-06-30',
+    insuranceNumber: '0987654321',
+  },
+  {
+    insuranceName: '家族の安全',
+    constructor: '佐藤 次郎',
+    insuranceFee: 12000,
+    expirationDate: '2023-09-15',
+    insuranceNumber: '9876543210',
+  },
+  {
+    insuranceName: '健康第一',
+    constructor: '鈴木 三郎',
+    insuranceFee: 15000,
+    expirationDate: '2025-02-28',
+    insuranceNumber: '1357924680',
+  },
+  {
+    insuranceName: '安心ライフ',
+    constructor: '高橋 芳子',
+    insuranceFee: 9000,
+    expirationDate: '2023-11-30',
+    insuranceNumber: '2468135790',
+  },
+  {
+    insuranceName: '子供の未来',
+    constructor: '伊藤 四郎',
+    insuranceFee: 11000,
+    expirationDate: '2024-08-15',
+    insuranceNumber: '3698521470',
+  },
+];
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+    <Stack spacing={2} alignItems={'center'}>
+      <Typography variant="h3">保険証券一覧</Typography>
+      <InsuranceList insurances={insurances} />
+    </Stack>
+  );
 }
