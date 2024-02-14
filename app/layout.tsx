@@ -22,6 +22,10 @@ const darkTheme = createTheme({
     // mode: 'dark',
   },
 });
+darkTheme.typography.body1 = {
+  fontSize: '1.2rem',
+};
+
 const drawerWidth = 240;
 
 export default function RootLayout({
