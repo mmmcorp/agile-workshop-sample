@@ -1,15 +1,13 @@
 import { Article, Loupe, SaveAlt } from '@mui/icons-material';
 import {
-  Typography,
   Card,
   CardContent,
   CardActions,
   Button,
-  Box,
   Stack,
   CardHeader,
 } from '@mui/material';
-import { LabeledText } from './LabeledText';
+import LabeledText from './LabeledText';
 
 type Insurance = {
   insuranceName: string;
@@ -27,7 +25,11 @@ function convertToHalfWidth(str: string): string {
   });
 }
 
-export function InsuranceList({ insurances }: { insurances: Insurance[] }) {
+export default function InsuranceList({
+  insurances,
+}: {
+  insurances: Insurance[];
+}) {
   return (
     <>
       {insurances.map((insurance, index) => (

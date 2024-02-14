@@ -1,4 +1,4 @@
-import { InsuranceList } from '@/components/InsuranceList';
+import InsuranceList from '@/components/InsuranceList';
 import { Stack, Typography } from '@mui/material';
 
 const insurances = [

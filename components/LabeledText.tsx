@@ -2,7 +2,7 @@
 import { useTheme } from '@mui/material/styles';
 import { Stack, Typography } from '@mui/material';
 
-export function LabeledText({
+export default function LabeledText({
   label,
   text,
 }: {
