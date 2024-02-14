@@ -48,7 +48,7 @@ const insurances = [
 
 export default function Home() {
   return (
-    <Stack spacing={2} alignItems={'center'}>
+    <Stack spacing={2}>
       <Typography variant="h3">保険証券一覧</Typography>
       <InsuranceList insurances={insurances} />
     </Stack>

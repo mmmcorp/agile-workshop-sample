@@ -1,6 +1,5 @@
 import { Loupe } from '@mui/icons-material';
 import {
-  Stack,
   Typography,
   Card,
   CardContent,
@@ -16,13 +15,11 @@ type Insurance = {
   insuranceNumber: string;
 };
 
-const cardWidth = 400;
-
 export function InsuranceList({ insurances }: { insurances: Insurance[] }) {
   return (
     <>
       {insurances.map((insurance, index) => (
-        <Card key={index} sx={{ width: cardWidth }}>
+        <Card key={index} sx={{ width: '100%' }}>
           <CardContent>
             <Typography variant="h4">{insurance.insuranceName}</Typography>
             <Typography>契約者: {insurance.constructor}</Typography>
